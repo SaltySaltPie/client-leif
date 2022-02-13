@@ -1,0 +1,19 @@
+.contentC {
+  .bodyC {
+    padding-top: 4rem;
+    display: flex;
+
+
+    .mainContentC {
+      width: 80%;
+    }
+    border-bottom: 2px solid var(--br1);
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .mainContentC {
+    width: 100% !important;
+  }
+}

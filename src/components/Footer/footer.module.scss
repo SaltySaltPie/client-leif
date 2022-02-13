@@ -1,0 +1,135 @@
+.contentC {
+  .cluster1 {
+    display: flex;
+    font-size: 0.8rem;
+    > div {
+      width: 33.33%;
+      border: 1px solid var(--br1);
+    }
+    .navC {
+      padding: 1rem 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      > div > div {
+        padding-left: 2rem;
+        margin-bottom: 1rem;
+      }
+      .title {
+        color: grey;
+        font-weight: bold;
+      }
+    }
+    .infoC {
+      padding-top: 1rem;
+      text-align: center;
+      .hashtag {
+        color: gray;
+        font-weight: bold;
+      }
+      .slogan {
+        font-style: italic;
+        font-weight: lighter;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+      .address {
+        margin-bottom: 1rem;
+        letter-spacing: 0.5px;
+      }
+      .sayHi {
+        font-weight: bold;
+        margin-bottom: 1rem;
+        padding-top: 1rem;
+      }
+      > div:last-child {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+      }
+    }
+    .contactC {
+      text-align: center;
+      .imageC {
+        margin: 0 auto;
+        max-width: 15rem;
+      }
+      > p {
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+      }
+      > input {
+        text-align: center;
+        padding: 0.5rem 0;
+        width: 10rem;
+        margin-bottom: 1rem;
+        font-size: 0.6rem;
+        border: 1px solid var(--bg1);
+      }
+      button {
+        font-size: 0.6rem;
+        padding: 0.5rem 0;
+        box-shadow: none;
+        background-color: yellow;
+        border: none;
+        text-transform: uppercase;
+        width: 10rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .cluster2 {
+    display: flex;
+    > div {
+      width: 33.33%;
+      border: 1px solid var(--br1);
+      border-bottom: none;
+    }
+    .crC {
+      font-size: 0.8rem;
+      > div {
+        padding: 1rem 0;
+      }
+    }
+    .followC {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: lighter;
+      > div {
+        margin: 1rem;
+      }
+    }
+    .termsC {
+      text-transform: uppercase;
+      color: gray;
+      font-size: 0.8rem;
+      > div {
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cluster1 {
+    flex-direction: column;
+    > div {
+      width: 100% !important;
+      border: none !important;
+    }
+    .navC {
+      display: flex;
+      text-align: center;
+      justify-content: space-around;
+    }
+  }
+  .cluster2 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    > div {
+      border: none !important;
+      width: 100% !important;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.contentC {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: -20rem;
+  width: min(90%, 20rem);
+  height: 100%;
+  background-color: white;
+  border: 1px solid var(--bg1);
+
+  transition: all 0.5s ease-in-out;
+  .closeBtn {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    > img {
+      height: 1.5rem;
+      filter: invert(86%) sepia(2%) saturate(4143%) hue-rotate(335deg)
+        brightness(107%) contrast(94%);
+    }
+  }
+  .searchC {
+    padding-top: 4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    > input {
+      padding: 0.4rem 1rem;
+      border: none;
+      border-bottom: 1px solid var(--br1);
+      &:focus {
+        outline: none;
+      }
+    }
+    > img {
+      height: 1rem;
+    }
+  }
+  .cateC {
+    text-transform: capitalize;
+    .name {
+      padding: 1rem;
+      border-bottom: 1px solid var(--bg1);
+    }
+  }
+  .loginC {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    .login {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+    }
+    .bar {
+      border: 0.5px solid var(--bg1);
+    }
+    img {
+      height: 1rem;
+    }
+  }
+}
+
+.show {
+  transform: translate3d(20rem, 0, 0);
+}
+
+.hide {
+  transform: translate3d(-20rem, 0, 0);
+}

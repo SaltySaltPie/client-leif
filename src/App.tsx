@@ -1,25 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header/Header";
+import Nav from "./components/Nav/Nav";
+import styles from "./app.module.scss";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home/Home";
+import Products from "./components/Products/Products";
+import ShortAbout from "./components/shortAbout/ShortAbout";
+import Footer from "./components/Footer/Footer";
+import { useState } from "react";
+import MobileNav from "./components/MobileNav/MobileNav";
+function App(): JSX.Element {
+  const [showMenu, setShowMenu] = useState<boolean>(false);
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className={`${styles.contentC}`}>
+      <Header setShowMenu={setShowMenu}></Header>
+      <article className={`${styles.bodyC}`}>
+        <Nav></Nav>
+        <MobileNav showMenu={showMenu} setShowMenu={setShowMenu}></MobileNav>
+        <div className={`${styles.mainContentC}`}>
+          <Routes>
+            <Route path="/" element={<Home></Home>}></Route>
+            <Route
+              path="/collections/:cID"
+              element={<Products></Products>}
+            ></Route>
+          </Routes>
+        </div>
+      </article>
+      <article>
+        <Routes>
+          <Route path="/" element={<ShortAbout></ShortAbout>}></Route>
+        </Routes>
+      </article>
+      <article>
+        <Footer></Footer>
+      </article>
+    </section>
   );
 }
 

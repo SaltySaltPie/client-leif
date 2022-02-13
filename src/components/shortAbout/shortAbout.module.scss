@@ -1,0 +1,21 @@
+.contentC {
+    text-align: center;
+    padding: 2rem 5rem;
+    .title {
+        padding: 0.5rem ;
+        font-size: 0.8rem;
+        background-color: var(--bg1);
+        width: 15rem;
+        margin: 0 auto;
+        border-radius: 2rem;
+    }
+    .p {
+        font-weight: lighter;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .contentC {
+        padding: 2rem;
+    }
+}

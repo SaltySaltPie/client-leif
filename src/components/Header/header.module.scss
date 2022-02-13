@@ -1,0 +1,112 @@
+.contentC {
+  .sloganC {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--bg1);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    > span {
+      font-weight: bold;
+    }
+  }
+
+  .navItemsC {
+    display: flex;
+    // padding: 0 2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid var(--br1);
+    justify-content: space-between;
+    > div {
+      width: 33%;
+      //   outline: 1px solid red;
+    }
+    .searchC {
+      padding-top: 1rem;
+      padding-left: 1rem;
+      > img {
+        height: 1rem;
+        padding-right: 0.5rem;
+        &:hover {
+          filter: invert(95%) sepia(7%) saturate(1771%) hue-rotate(312deg)
+            brightness(102%) contrast(95%);
+        }
+      }
+      > input {
+        border: none;
+        border-bottom: 0.5px solid black;
+        padding: 0.5rem;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .menuC {
+      display: none;
+      align-items: center;
+      > img {
+        height: 2rem;
+        margin-left: 2rem;
+      }
+    }
+    .iconC {
+      display: flex;
+      justify-content: center;
+      padding-top: 0.2rem;
+      > img {
+        height: 6.5rem;
+      }
+    }
+    .rightC {
+      position: relative;
+      > div {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        > div {
+          margin: 1rem 0rem;
+          padding: 0rem 1rem;
+        }
+        > div:first-child {
+          border-right: 2px solid var(--br2);
+        }
+        > div:last-child {
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+          > img {
+            height: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .myCart {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .signIn {
+    display: none;
+  }
+  .searchC {
+    display: none;
+  }
+  .menuC {
+    display: flex !important;
+  }
+  .myCartC {
+    display: flex !important;
+    align-items: center !important;
+    > img {
+      height: 2rem !important;
+    }
+  }
+}
