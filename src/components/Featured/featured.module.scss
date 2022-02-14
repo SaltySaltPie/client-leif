@@ -1,0 +1,17 @@
+.contentC {
+    padding-bottom: 2rem;
+  .headerC {
+    margin-bottom: 1.5rem;
+    .titleName {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+  }
+  .productsC {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+  }
+}

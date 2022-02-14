@@ -8,6 +8,7 @@ import ShortAbout from "./components/shortAbout/ShortAbout";
 import Footer from "./components/Footer/Footer";
 import { useState } from "react";
 import MobileNav from "./components/MobileNav/MobileNav";
+import Featured from "./components/Featured/Featured";
 function App(): JSX.Element {
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
@@ -21,7 +22,11 @@ function App(): JSX.Element {
           <Routes>
             <Route path="/" element={<Home></Home>}></Route>
             <Route
-              path="/collections/:cID"
+              path="/collections/new-arrivals"
+              element={<Featured></Featured>}
+            ></Route>
+            <Route
+              path="/collections/:cID/:sID/:pID"
               element={<Products></Products>}
             ></Route>
           </Routes>

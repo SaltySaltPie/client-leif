@@ -3,7 +3,8 @@
   margin-bottom: 2rem;
   .img1 {
     position: relative;
-    height: 30rem;
+    width: 70%;
+    margin: 0 auto;
     .hover1 {
       position: absolute;
       top: 2rem;
@@ -49,6 +50,11 @@
     flex-direction: column;
     > div {
       width: 100% !important;
+    }
+  }
+  .contentC {
+    .img1 {
+      width: 90%;
     }
   }
 }

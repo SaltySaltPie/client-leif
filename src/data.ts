@@ -4,7 +4,6 @@ export const data: Data = {
     {
       name: "new arrivals",
       link: "new-arrivals",
-      img: "https://cdn.shopify.com/s/files/1/0125/8122/collections/home_decor_1024x1024.jpg?v=1631162313",
     },
     {
       name: "home decor",

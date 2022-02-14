@@ -1,0 +1,23 @@
+.contentC {
+    width: min(20% , 15rem);
+    text-align: center;
+  .imgC {
+    > img {
+      width: 100%;
+    }
+  }
+  .titleC {
+      text-transform: uppercase;
+      font-size: 0.6rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+  }
+  .priceC{
+      font-weight: lighter;
+      font-style: italic;
+      font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+}

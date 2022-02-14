@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import AppContext from "../../context/AppContext";
 import styles from "./header.module.scss";
 
 interface Props {
   setShowMenu: (e: boolean) => void;
 }
 
-function Header({  setShowMenu }: Props) {
+function Header({ setShowMenu }: Props) {
+  const { appState } = useContext(AppContext);
   const [search, setSearch] = useState<string>("");
   return (
     <section className={`${styles.contentC} `}>
@@ -39,8 +41,11 @@ function Header({  setShowMenu }: Props) {
           <div>
             <div className={`${styles.signIn}`}>Sign In</div>
             <div className={`${styles.myCartC}`}>
-              <div className={`${styles.myCart}`}>My Cart</div>
+              <div className={`${styles.myCart}`}>
+                <Link to="/cart">My Cart</Link>
+              </div>
               <img src="/icons/basket.png" alt="" />
+              {appState.cart.length > 0 && <div>{appState.cart.length}</div>}
             </div>
           </div>
         </div>

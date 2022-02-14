@@ -14,7 +14,7 @@ function MobileNav({ showMenu, setShowMenu }: Props): JSX.Element | null {
     <section
       className={`${styles.contentC} ${
         showMenu ? styles.show : styles.hide
-      } tr`}
+      }`}
     >
       <div className={`${styles.closeBtn}`} onClick={() => setShowMenu(false)}>
         <img src="/icons/close.svg" alt="" />
